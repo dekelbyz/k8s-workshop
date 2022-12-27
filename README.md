@@ -18,10 +18,12 @@ minikube has `kubectl` installed as a dependency so we won't have to install it 
 `brew install minikube`
 `minikube start`
 `brew install kubectx`
+
 ---
 ## Let's start
 
 
 `git checkout lesson-1`
+
 ---
 
