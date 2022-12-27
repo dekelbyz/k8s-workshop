@@ -15,6 +15,6 @@ We could define our service somewhere else but it makes a lot of sense putting i
 deployment, because they linked to each other. They are besties <3 <3
 Lets apply the new changes into our cluster:
 
-`kubectl apply -f mongo.yaml`
+`kubectl apply -f k8s/mongo.yaml`
 
 * if you did not alter your context to our namespace, add: `-n ws-namespace` at the end.
