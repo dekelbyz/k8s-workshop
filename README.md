@@ -7,13 +7,17 @@ We will split the work by using branches. Every branch will represent the curren
 state of knowledge / progress we're at at the moment.
 
 ---
-# Lesson3:
-in this lesson we will modify a little bit our `mongo.yaml` file.
-First, we will go to https://hub.docker.com/_/mongo and learn what kind of 
-variables/other crucial information we need in order to use this image properly properly.
+# Lesson4:
+In this lesson, we will add the secret component and attach our deployment to it.
+It will allow us to use an external configuration and by that we will not have to 
+restart our system with every change we make.
+and this information is secret and cannot be accessed from outside the cluster so 
+its very secure.
 
-Then, we will add those environment variables in the deployment configuration.
+run the following command in order to apply our new secret config into our cluster:
+`kubectl apply -f k8s/secret.yaml` 
 
-We will also expose a port for the container.
+Now lets re-deploy our deployment with our new changes:
+`kubectl apply -f k8s/mongo.yaml` 
 
-We do not have anything to test / run at this point because our configuration files are currently broken.
+* if you did not alter your context to our namespace, add: `-n ws-namespace` at the end.
