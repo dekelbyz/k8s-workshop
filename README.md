@@ -7,10 +7,13 @@ We will split the work by using branches. Every branch will represent the curren
 state of knowledge / progress we're at at the moment.
 
 ---
-# Lesson2:
-in this lesson we will create a mongo-db deployment.
-We have the `mongo.yaml` configuration file and image from docker registry.
-run:
-`kubectl apply -f mongo.yaml`
+# Lesson3:
+in this lesson we will modify a little bit our `mongo.yaml` file.
+First, we will go to https://hub.docker.com/_/mongo and learn what kind of 
+variables/other crucial information we need in order to use this image properly properly.
 
-* if you did not alter your context to our namespace, add: `-n ws-namespace` at the end.
+Then, we will add those environment variables in the deployment configuration.
+
+We will also expose a port for the container.
+
+We do not have anything to test / run at this point because our configuration files are currently broken.
