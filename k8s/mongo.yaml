@@ -23,5 +23,5 @@ spec:
         - name: MONGO_INITDB_ROOT_USERNAME
           value:
 
-        - name: MONGO_INITDB_ROOT_USERNAME
+        - name: MONGO_INITDB_ROOT_PASSWORD
           value:
