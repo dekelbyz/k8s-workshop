@@ -12,9 +12,9 @@ in this lesson all we will do is set up a namespace, which will allow us to
 seperate all our future resources and put them in one place instead of 
 installing them on our global, default namespace.
 
-```kubectl apply -f ws-namespace.yaml```
+`kubectl apply -f k8s/ws-namespace.yaml`
 
 lets use kubens in order to switch the default namespace (provided by k8s) to the one we just created.
 that way we won't have to specify on which namespace we want to create our resources every time.
 
-```kubens ws-namespace```
+`kubens ws-namespace`
