@@ -7,17 +7,14 @@ We will split the work by using branches. Every branch will represent the curren
 state of knowledge / progress we're at at the moment.
 
 ---
-# Lesson4:
-In this lesson, we will add the secret component and attach our deployment to it.
-It will allow us to use an external configuration and by that we will not have to 
-restart our system with every change we make.
-and this information is secret and cannot be accessed from outside the cluster so 
-its very secure.
+# Lesson5:
+In this lesson we will create a service and apply it to our cluster.
+The service defined on the `mongo.yaml` file, below the deployment definition.
+YAML gives us the ability to put 2 configuration inside one file by separating them using `---`
+We could define our service somewhere else but it makes a lot of sense putting it along side the
+deployment, because they linked to each other. They are besties <3 <3
+Lets apply the new changes into our cluster:
 
-run the following command in order to apply our new secret config into our cluster:
-`kubectl apply -f k8s/secret.yaml` 
-
-Now lets re-deploy our deployment with our new changes:
-`kubectl apply -f k8s/mongo.yaml` 
+`kubectl apply -f mongo.yaml`
 
 * if you did not alter your context to our namespace, add: `-n ws-namespace` at the end.
