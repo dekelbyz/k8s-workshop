@@ -13,7 +13,7 @@ and link our mongo-express deployment to it in order to read from it.
 But first, of course, we will have to register it to our cluster
 so lets run:
 
-`kuebctl apply -f k8s/mongo-configmap.yaml`
+`kubectl apply -f k8s/mongo-configmap.yaml`
 
 now lets deploy our deployment to the cluster as well:
 
