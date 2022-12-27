@@ -7,18 +7,21 @@ We will split the work by using branches. Every branch will represent the curren
 state of knowledge / progress we're at at the moment.
 
 ---
-# Lesson7:
-Now we can add our configMap (which is pretty much same as secret syntax)
-and link our mongo-express deployment to it in order to read from it.
-But first, of course, we will have to register it to our cluster
-so lets run:
+# Lesson8:
+Now that we mongo-express up and running, lets access it from the browser.
+In order to do that, we need to add an external service which will allow addressing 
+the cluster from outside of it.
 
-`kuebctl apply -f k8s/mongo-configmap.yaml`
-
-now lets deploy our deployment to the cluster as well:
-
-`kubectl apply -f k8s/mongo-express.yaml`
-
+We added the external service to the same file of the deployment, as we did with mongodb configuration file.
+Lets apply this to our cluster by running:
+`kubectl apply -f k8s/mongo-express.yaml` 
 * if you did not alter your context to our namespace, add: `-n ws-namespace` at the end.
+
+
+Now, lets help minikube give us an external ip address for our external service we've created.
+`minikube service mongo-express-service -n ws-namespace`
+
+
+
 
 
