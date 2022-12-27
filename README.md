@@ -11,6 +11,6 @@ state of knowledge / progress we're at at the moment.
 in this lesson we will create a mongo-db deployment.
 We have the `mongo.yaml` configuration file and image from docker registry.
 run:
-`kubectl apply -f mongo.yaml`
+`kubectl apply -f k8s/mongo.yaml`
 
 * if you did not alter your context to our namespace, add: `-n ws-namespace` at the end.
