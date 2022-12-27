@@ -15,11 +15,13 @@ we want to make sure we have minikube installed on our computer
 in order to run a 1-machine kubernetes cluster.
 minikube has `kubectl` installed as a dependency so we won't have to install it seperatly.
 
-```brew install minikube```
-```minikube start```
-```brew install kubectx```
+`brew install minikube`
+`minikube start`
+`brew install kubectx`
 ---
 ## Let's start
-```git checkout lesson-1```
+
+
+`git checkout lesson-1`
 ---
 
