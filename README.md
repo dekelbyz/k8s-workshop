@@ -7,14 +7,16 @@ We will split the work by using branches. Every branch will represent the curren
 state of knowledge / progress we're at at the moment.
 
 ---
-# Lesson5:
-In this lesson we will create a service and apply it to our cluster.
-The service defined on the `mongo.yaml` file, below the deployment definition.
-YAML gives us the ability to put 2 configuration inside one file by separating them using `---`
-We could define our service somewhere else but it makes a lot of sense putting it along side the
-deployment, because they linked to each other. They are besties <3 <3
-Lets apply the new changes into our cluster:
+# Lesson6:
+Now that we have our mongo-db app up and running, lets try to interact with it using mongo-express.
+We will add a new deployment to a file called `mongo-express.yaml`
 
-`kubectl apply -f k8s/mongo.yaml`
+"Mongo Express is a lightweight web-based administrative interface deployed to manage MongoDB databases interactively. It is authored using Node.js, Express and Bootstrap packages. " - helpnetsecurity.
 
-* if you did not alter your context to our namespace, add: `-n ws-namespace` at the end.
+Since the mongo-express configuration requires some of the credentials we already have in our secret,
+we can simply address the right secret on our cluster, just like we did with the mongodb.
+
+There is another variable tho, this variable should exist on the configMap.
+So branch up to lesson-7 and lets see how we add a configMap component and how we address it
+
+
