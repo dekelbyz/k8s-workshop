@@ -7,16 +7,18 @@ We will split the work by using branches. Every branch will represent the curren
 state of knowledge / progress we're at at the moment.
 
 ---
-# Lesson6:
-Now that we have our mongo-db app up and running, lets try to interact with it using mongo-express.
-We will add a new deployment to a file called `mongo-express.yaml`
+# Lesson7:
+Now we can add our configMap (which is pretty much same as secret syntax)
+and link our mongo-express deployment to it in order to read from it.
+But first, of course, we will have to register it to our cluster
+so lets run:
 
-"Mongo Express is a lightweight web-based administrative interface deployed to manage MongoDB databases interactively. It is authored using Node.js, Express and Bootstrap packages. " - helpnetsecurity.
+`kuebctl apply -f k8s/mongo-configmap.yaml`
 
-Since the mongo-express configuration requires some of the credentials we already have in our secret,
-we can simply address the right secret on our cluster, just like we did with the mongodb.
+now lets deploy our deployment to the cluster as well:
 
-There is another variable tho, this variable should exist on the configMap.
-So branch up to lesson-7 and lets see how we add a configMap component and how we address it
+`kubectl apply -f k8s/mongo-express.yaml`
+
+* if you did not alter your context to our namespace, add: `-n ws-namespace` at the end.
 
 

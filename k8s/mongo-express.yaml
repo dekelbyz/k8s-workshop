@@ -4,14 +4,12 @@ metadata:
   name: mongo-express
   labels:
     app: mongo-express
-spec:
-  # replicaSet definition
+spec: 
   replicas: 1
   selector: 
     matchLabels:
       app: mongo-express
-  # pod definition
-  template:
+  template:  # pod definition
     metadata:
       labels:
         app: mongo-express
@@ -23,7 +21,7 @@ spec:
         - containerPort: 8081
         env:
         - name: ME_CONFIG_MONGODB_USERNAME
-        valueFrom:
+          valueFrom:
             secretKeyRef:
               name: mongodb-secret
               key: mongo-root-username
@@ -34,6 +32,6 @@ spec:
               key: mongo-root-password
         - name: ME_CONFIG_MONGODB_SERVER
           valueFrom:
-            configMapRef:
-              name:
-              key:
+            configMapKeyRef:
+              name: mongodb-configmap
+              key: database_url
