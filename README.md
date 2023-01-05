@@ -17,10 +17,14 @@ We are going to
 * Create a deployment 
 * Use the image we've pushed to the registry in our controller 
 
-You can find the application and its docker image in the 'hello-world' directory
-Now, who wants to push this bad boy to dockerhub? 
+Lets create and push this image (after logging in to docker.io)
+Follow the next steps: 
 
-`git checkout lesson-10`
+`docker login -u "myusername" -p "mypassword" docker.io`
+`cd hello-world/`
+`docker build -t ${your_docker_username}/hello-world .`
+`docker push ${your_docker_username}/hello-world`
+
 
 
 
