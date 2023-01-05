@@ -15,6 +15,4 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: hello-world
-        ports:
-        - containerPort: 8080
+        image: <YOUR-DOCKERHUB-USERNAME>/hello-world

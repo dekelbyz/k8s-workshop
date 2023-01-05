@@ -21,13 +21,16 @@ Now that our image is in our registry - we create a deployment
 and use that image (we can use the same namespace - ws-namespace)
 We can now apply that deployment and add it to the cluster with the following command:
 
+
+* Change the container image's name to the desired one
+
 `kubectl apply -f hello-world.yaml`
 
 Now, lets get the pod's name in order to check its logs:
 
 `kubectl get pods`
 
-`kubectl logs <pod-name>`
+`kubectl logs <POD-NAME>`
 
 
 
