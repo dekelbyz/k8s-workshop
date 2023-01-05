@@ -7,7 +7,7 @@ We will split the work by using branches. Every branch will represent the curren
 state of knowledge / progress we're at at the moment.
 
 ---
-# Lesson9:
+# Lesson10:
 Now we are going to do something different.
 We are going to 
 
@@ -22,7 +22,7 @@ Follow the next steps:
 
 `docker login -u "myusername" -p "mypassword" docker.io`
 `cd hello-world/`
-`docker build -t ${your_docker_username}/hello-world .`
+`docker build -t ${your_docker_username}/hello-world . `
 `docker push ${your_docker_username}/hello-world`
 
 
