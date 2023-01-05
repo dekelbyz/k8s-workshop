@@ -20,10 +20,10 @@ We are going to
 Lets create and push this image (after logging in to docker.io)
 Follow the next steps: 
 
-`docker login -u "myusername" -p "mypassword" docker.io`
+`docker login -u <YOUR-DOCKERHUB-USERNAME> -p <YOUR-DOCKERHUB-PASSWORD> docker.io`
 `cd hello-world/`
-`docker build -t ${your_docker_username}/hello-world . `
-`docker push ${your_docker_username}/hello-world`
+`docker build -t <YOUR-DOCKERHUB-USERNAME>/hello-world . `
+`docker push <YOUR-DOCKERHUB-USERNAME>/hello-world`
 
 
 
