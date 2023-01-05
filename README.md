@@ -7,7 +7,7 @@ We will split the work by using branches. Every branch will represent the curren
 state of knowledge / progress we're at at the moment.
 
 ---
-# Lesson9:
+# Lesson11:
 Now we are going to do something different.
 We are going to 
 
@@ -17,13 +17,19 @@ We are going to
 * Create a deployment 
 * Use the image we've pushed to the registry in our controller 
 
-Lets create and push this image (after logging in to docker.io)
-Follow the next steps: 
+Now that our image is in our registry - we create a deployment 
+and use that image (we can use the same namespace - ws-namespace)
+We can now apply that deployment and add it to the cluster with the following command:
 
-`docker login -u "myusername" -p "mypassword" docker.io`
-`cd hello-world/`
-`docker build -t ${your_docker_username}/hello-world .`
-`docker push ${your_docker_username}/hello-world`
+`kubectl apply -f hello-world.yaml`
+
+Now, lets get the pod's name in order to check its logs:
+
+`kubectl get pods`
+
+`kubectl logs <pod-name>`
+
+
 
 
 
