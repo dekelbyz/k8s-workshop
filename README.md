@@ -7,20 +7,20 @@ We will split the work by using branches. Every branch will represent the curren
 state of knowledge / progress we're at at the moment.
 
 ---
-# Lesson8:
-Now that we mongo-express up and running, lets access it from the browser.
-In order to do that, we need to add an external service which will allow addressing 
-the cluster from outside of it.
+# Lesson9:
+Now we are going to do something different.
+We are going to 
 
-We added the external service to the same file of the deployment, as we did with mongodb configuration file.
-Lets apply this to our cluster by running:
-`kubectl apply -f k8s/mongo-express.yaml` 
-* if you did not alter your context to our namespace, add: `-n ws-namespace` at the end.
+* create a simple 'hello-world' image
+* Authenticate to docker 
+* Push it to docker registry (dockerhub) 
+* Create a deployment 
+* Use the image we've pushed to the registry in our controller 
 
+You can find the application and its docker image in the 'hello-world' directory
+Now, who wants to push this bad boy to dockerhub? 
 
-Now, lets help minikube give us an external ip address for our external service we've created.
-`minikube service mongo-express-service -n ws-namespace`
-
+`git checkout lesson-10`
 
 
 
